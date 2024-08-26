@@ -5,7 +5,7 @@ layout: home
 hero:
     name: "Kawaii Networks"
     text: "AS27523"
-    tagline: 一个神奇的网络
+    tagline: 看得到我吗
     actions:
         - theme: brand
           text: 更多信息

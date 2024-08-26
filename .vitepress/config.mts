@@ -37,5 +37,10 @@ export default defineConfig({
             },
             { icon: "github", link: "https://github.com/KawaiiNetworks/website" },
         ],
+
+        footer: {
+            message: "Released under the CC BY-NC-SA 4.0",
+            copyright: "Copyright © 2024 Kawaii Networks LLC",
+        },
     },
 });
