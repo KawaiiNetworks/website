@@ -59,7 +59,7 @@ outline: deep
 
 #### Peer
 
-1. 对于一个与我们建立连接的网络，首先在 [PeeringDB](https://www.peeringdb.com/) 上使用 ASN 查找该网络的 IRR as-set，IPv4 Prefixes，IPv6 Prefixes。如果 IRR as-set 为空，则使用其 ASN 作为 AS-SET （如 AS23333）。如果 IPv4 Prefixes 或 IPv6 Prefixes 为空，则视为不设上限。
+1. 对于一个与我们建立连接的网络，首先在 [PeeringDB](https://www.peeringdb.com/) 上使用 ASN 查找该网络的 IRR as-set，IPv4 Prefixes，IPv6 Prefixes。如果 IRR as-set 为空，则使用其 ASN 作为 AS-SET （如 AS23333）。如果 IPv4 Prefixes 或 IPv6 Prefixes 为空（0），则关闭会话。
 2. 拒绝所有前缀长度在 0-7 ，25-32 的路由（IPv4），所有前缀长度在 0-15，49-128 的路由（IPv6）。拒绝所有 as-path 包含 Bogon ASN 的路由。拒绝所有 Bogon IPv4 以及 Bogon IPv6 前缀。
 3. 拒绝所有 RPKI Invalid 的路由。
 4. 拒绝所有 as-path 不符合该网络的 AS-SET 的路由。as-path 应当如同金字塔一般，从左至右相邻的 AS 均为直接的 Upstream - Downstream 关系。
@@ -70,8 +70,6 @@ outline: deep
 -   设置所有接受的路由的 local-preference 为 160。
 
 ::: tip
-目前并未实现前缀数量限制。
-
 目前只拒绝 as-path 不符合最左侧是 Peer AS，最右侧是其 Cone AS 的路由。
 
 目前如果 AS Cone 太大，导致 AS-SET 及 prefix list 过大，则只拒绝 as-path 不符合最左侧是 Peer AS 的路由，不对 prefix list 进行限制。
