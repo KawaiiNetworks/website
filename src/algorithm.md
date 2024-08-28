@@ -111,21 +111,13 @@ outline: deep
 
 #### Upstream
 
-1. 匹配所有类型为 static 和 connected 的路由。
-2. 接受所有属于自己 AS 的前缀，最长可接受 24（IPv4）和 48（IPv6）。
-3. 匹配并接受所有源自 Downstream 的路由。
-
-::: tip
-目前代码实现与上述算法略有不同，我也有点看不懂之前的代码。
-:::
+1. 匹配所有类型为 static 和 connected 的路由。接受所有属于自己 AS 的前缀，最长可接受 24（IPv4）和 48（IPv6）。
+2. 拒绝从 IBGP 接收的路由。
+3. 接受所有源自 Downstream 的路由。（因此仅有当地 Downstream 被发给上游）
 
 #### IX Route Server
 
 如同 Upstream 处理。
-
-::: tip
-如同 Upstream。
-:::
 
 #### Peer
 
