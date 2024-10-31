@@ -26,6 +26,10 @@ export default defineConfig({
                 text: "Algorithm",
                 items: [{ text: "algorithm", link: "/algorithm" }],
             },
+            {
+                text: "Router info",
+                items: [{ text: "Router info", link: "/router" }],
+            },
         ],
 
         socialLinks: [
