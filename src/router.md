@@ -20,6 +20,10 @@ onMounted(async () => {
     const response = await fetch("https://raw.githubusercontent.com/KawaiiNetworks/AS27523/refs/heads/main/network/vyos/vyos.yaml"); // 替换为你的YAML文件URL
     const yamlText = await response.text();
     vyosConfig.value = load(yamlText);
+    vyosConfig.value.router.protocols.bgp.upstream.sort((a, b) => a.asn - b.asn)
+    vyosConfig.value.router.protocols.bgp.routeserver.sort((a, b) => a.asn - b.asn)
+    vyosConfig.value.router.protocols.bgp.peer.sort((a, b) => a.asn - b.asn)
+    vyosConfig.value.router.protocols.bgp.downstream.sort((a, b) => a.asn - b.asn)
   } catch (error) {
     console.error('Error loading YAML:', error);
   }
