@@ -19,16 +19,13 @@ export default defineConfig({
                 items: [{ text: "Kawaii Networks", link: "/about" }],
             },
             {
-                text: "Peering",
-                items: [{ text: "Peering", link: "/peering" }],
-            },
-            {
-                text: "Algorithm",
-                items: [{ text: "algorithm", link: "/algorithm" }],
-            },
-            {
-                text: "Router info",
-                items: [{ text: "Router info", link: "/router" }],
+                text: "Network Details",
+                items: [
+                    { text: "Router Info", link: "/router" },
+                    { text: "Peering", link: "/peering" },
+                    { text: "Algorithm", link: "/algorithm" },
+                    { text: "BGP Communities", link: "/community" },
+                ],
             },
         ],
 
