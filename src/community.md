@@ -10,7 +10,6 @@ Please visit [https://bgp.tools/communities/27523](https://bgp.tools/communities
 
 |    Community    |     Description     |
 | :-------------: | :-----------------: |
-|   27523:0:100   |    from upstream    |
 |   27523:0:200   |    from upstream    |
 |   27523:0:300   |  from routeserver   |
 |   27523:0:400   |      from peer      |
