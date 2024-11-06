@@ -21,16 +21,19 @@ Please visit [https://bgp.tools/communities/27523](https://bgp.tools/communities
 
 ### Control Communities
 
-|   Community    |            Description            |
-| :------------: | :-------------------------------: |
-|  27523:1000:0  |     do not announce to ANY AS     |
-| 27523:1000:nnn |      do not announce to AS$0      |
-|  27523:1001:0  |  do not announce to ANY neighbor  |
-| 27523:1001:nnn | do not announce to neighbor id $0 |
-| 27523:1011:nnn |   prepend 1x to AS$0 (pending)    |
-| 27523:1012:nnn |   prepend 2x to AS$0 (pending)    |
-| 27523:1013:nnn |   prepend 3x to AS$0 (pending)    |
-| 27523:1020:nnn |  set local-pref to $0 (pending)   |
-| 27523:1030:nnn |    set metric to $0 (pending)     |
-| 27523:1031:nnn |    set metric += $0 (pending)     |
-| 27523:1032:nnn |    set metric -= $0 (pending)     |
+|   Community    |              Description               |
+| :------------: | :------------------------------------: |
+|  27523:1000:0  |       do not announce to ANY AS        |
+| 27523:1000:nnn |        do not announce to AS$0         |
+|  27523:1001:0  |    do not announce to ANY neighbor     |
+| 27523:1001:nnn |   do not announce to neighbor id $0    |
+| 27523:1100:nnn |         only announce to AS$0          |
+| 27523:1101:nnn |    only announce to neighbor id $0     |
+| 27523:2001:nnn |           prepend 1x to AS$0           |
+| 27523:2002:nnn |           prepend 2x to AS$0           |
+| 27523:2011:nnn | prepend 1x to neighbor id $0 (pending) |
+| 27523:2012:nnn | prepend 2x to neighbor id $0 (pending) |
+| 27523:2100:nnn |     set local-pref to $0 (pending)     |
+| 27523:2200:nnn |       set metric to $0 (pending)       |
+| 27523:2201:nnn |       set metric += $0 (pending)       |
+| 27523:2202:nnn |       set metric -= $0 (pending)       |
